@@ -17,7 +17,7 @@ Contributors:
  - [Connor Webster](https://github.com/Cwebster95)
  - Sam Humby
  - Nathan Osborn
- - Aleksey Solovey
+ - [Aleksey Solovey](https://github.com/AlekseySolovey)
 ________________________________________________________________________________
 
 Requirements:
