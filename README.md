@@ -1,4 +1,48 @@
-perfectcleavage
+PerfectCleavage
 ===============
 
-2nd Yr Group Project App
+Durham 2nd Year Computer Science Group Project App for the [Killhope Museum](http://www.killhope.org.uk/).
+
+Combining information on the museum with a focus on the museum's geological
+samples.
+
+The app is built on [AngularJS](https://angularjs.org) and compiled with
+[PhoneGap](https://phonegap.com) targeted at iOS 8 to enable a quick build and
+test cycle versus Android, where development would be much more challenging in
+the allowed time.
+________________________________________________________________________________
+
+Contributors:
+ - [Ben Tattersley](https://github.com/jamtat)
+ - [Connor Webster](https://github.com/Cwebster95)
+ - Sam Humby
+ - Nathan Osborn
+ - Aleksey Solovey
+________________________________________________________________________________
+
+Requirements:
+ - [NodeJS](http://nodejs.org)
+________________________________________________________________________________
+
+How to get started:
+
+ 1. Clone the repo
+```bash
+git clone https://github.com/jamtat/perfectcleavage.git
+```
+
+ 2. Navigate to the repo directory
+```bash
+cd  perfectcleavage
+```
+
+ 3. Install dependencies (assuming you have NodeJS installed already!)
+```bash
+npm install
+```
+
+ 4. Start the app
+```bash
+npm start
+```
+________________________________________________________________________________
