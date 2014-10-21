@@ -5,8 +5,6 @@ module.exports = (grunt) ->
 		pkg: grunt.file.readJSON 'package.json'
 
 		watch:
-			options:
-				livereload: true
 			less:
 				files: ['source/less/**']
 				tasks: ['less:build']
@@ -16,6 +14,12 @@ module.exports = (grunt) ->
 			views:
 				files: ['source/index.html', 'source/views/**']
 				tasks: ['copy:index', 'copy:views', 'concat:views']
+
+		concurrent:
+			options:
+				logConcurrentOutput: true
+			watch:
+				tasks: ['watch:less', 'watch:js', 'watch:views']
 
 		concat:
 			js:
@@ -103,6 +107,7 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-contrib-copy'
 	grunt.loadNpmTasks 'grunt-contrib-clean'
 	grunt.loadNpmTasks 'grunt-http-server'
+	grunt.loadNpmTasks 'grunt-concurrent'
 
 	# Default task(s)
 	grunt.registerTask 'build', [
@@ -117,5 +122,5 @@ module.exports = (grunt) ->
 			'copy:lib'
 			'copy:img'
 		]
-	grunt.registerTask 'dev', ['build', 'http-server:dev', 'watch:less', 'watch:js', 'watch:views']
+	grunt.registerTask 'dev', ['build', 'http-server:dev', 'concurrent:watch']
 	grunt.registerTask 'default', ['dev']
