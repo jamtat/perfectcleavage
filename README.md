@@ -16,7 +16,7 @@ Contributors:
  - [Ben Tattersley](https://github.com/jamtat)
  - [Connor Webster](https://github.com/Cwebster95)
  - [Sam Humby](https://github.com/Samalot)
- - Nathan Osborn
+ - [Nathan Osborn](https://github.com/nathanosborn)
  - [Aleksey Solovey](https://github.com/AlekseySolovey)
 ________________________________________________________________________________
 
