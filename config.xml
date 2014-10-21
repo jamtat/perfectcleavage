@@ -2,7 +2,7 @@
 <widget id="uk.org.killhope.perfectcleavage" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>PerfectCleavage</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        2nd Year Durham Comp Sci group project
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team

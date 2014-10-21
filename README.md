@@ -41,6 +41,11 @@ cd  perfectcleavage
 npm install
 ```
 
+4. Install grunt (for building the project)
+```bash
+npm install -g grunt-cli
+```
+
  4. Start the app
 ```bash
 npm start
