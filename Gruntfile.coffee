@@ -9,19 +9,24 @@ module.exports = (grunt) ->
 				livereload: true
 			less:
 				files: ['source/less/**']
-				tasks: ['less:development']
+				tasks: ['less:build']
 			js:
 				files: ['source/js/**.js', 'source/js/modules/**.js']
 				tasks: ['copy:js', 'concat:js']
 			views:
 				files: ['source/index.html', 'source/views/**']
-				tasks: ['copy:index', 'copy:views']
+				tasks: ['copy:index', 'copy:views', 'concat:views']
 
 		concat:
 			js:
 				src: ['source/js/modules/**.js']
 				dest: 'www/js/modules.js'
+			views:
+				src: ['source/views/**.html']
+				dest: 'www/views.html'
 
+		clean:
+			build: ['www/**']
 
 		copy:
 			misc:
@@ -62,9 +67,9 @@ module.exports = (grunt) ->
 				]
 
 		less:
-			development:
+			build:
 				options:
-					paths: ['less']
+					paths: ['source/less']
 					cleancss: false
 				files:
 					'www/css/main.css': 'source/less/main.less'
@@ -78,14 +83,15 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-contrib-clean'
 
 	# Default task(s)
-	grunt.registerTask 'default', ['watch:less', 'watch:js']
 	grunt.registerTask 'build', [
-			'clean:build',
-			'copy:build',
-			'imagemin:build',
-			'svgmin:build',
-			'cssmin:build',
-			'less:build',
-			'uglify:buildcopymin',
-			'uglify:build'
+			'clean:build'
+			'less:build'
+			'copy:js'
+			'concat:js'
+			'copy:index'
+			'copy:views'
+			'concat:views'
+			'copy:misc'
+			'copy:img'
 		]
+	grunt.registerTask 'default', ['build', 'watch:less', 'watch:js', 'watch:views']
