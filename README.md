@@ -27,29 +27,29 @@ ________________________________________________________________________________
 How to get started:
 
 1. Clone the repo
-```bash
-git clone https://github.com/jamtat/perfectcleavage.git
-```
+    ```bash
+    git clone https://github.com/jamtat/perfectcleavage.git
+    ```
 
 2. Navigate to the repo directory
-```bash
-cd  perfectcleavage
-```
+    ```bash
+    cd  perfectcleavage
+    ```
 
 3. Install dependencies (assuming you have NodeJS installed already!)
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 4. Install grunt (for building the project)
-```bash
-npm install -g grunt-cli
-```
+    ```bash
+    npm install -g grunt-cli
+    ```
 
 5. Start the app
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 6. Point your browser at http://localhost:8080
 ________________________________________________________________________________
