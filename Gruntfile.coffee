@@ -117,5 +117,5 @@ module.exports = (grunt) ->
 			'copy:lib'
 			'copy:img'
 		]
-	grunt.registerTask 'dev', ['build', 'watch:less', 'watch:js', 'watch:views', 'http-server:dev']
+	grunt.registerTask 'dev', ['build', 'http-server:dev', 'watch:less', 'watch:js', 'watch:views']
 	grunt.registerTask 'default', ['dev']

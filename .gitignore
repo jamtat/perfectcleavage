@@ -8,3 +8,5 @@ bower_components/
 www/**
 npm-debug.log
 www/index.html
+platforms/
+plugins/
