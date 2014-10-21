@@ -56,6 +56,16 @@ module.exports = (grunt) ->
 						dest: 'www/js'
 					}
 				]
+			lib:
+				files: [
+					{
+						expand: true
+						cwd: 'bower_components/'
+						flatten: true
+						src: ['*/*.js', '!*/*.min.js']
+						dest: 'www/js/lib'
+					}
+				]
 			img:
 				files: [
 					{
@@ -74,6 +84,17 @@ module.exports = (grunt) ->
 				files:
 					'www/css/main.css': 'source/less/main.less'
 
+		'http-server':
+			dev:
+				root: 'www/'
+				port: 8080
+				host: '127.0.0.1'
+				cache: 0
+				showDir: true
+				autoIndex: true
+				ext: "html"
+				runInBackground: true
+
 
 	grunt.loadNpmTasks 'grunt-contrib-less'
 	grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -81,6 +102,7 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-contrib-concat'
 	grunt.loadNpmTasks 'grunt-contrib-copy'
 	grunt.loadNpmTasks 'grunt-contrib-clean'
+	grunt.loadNpmTasks 'grunt-http-server'
 
 	# Default task(s)
 	grunt.registerTask 'build', [
@@ -92,6 +114,8 @@ module.exports = (grunt) ->
 			'copy:views'
 			'concat:views'
 			'copy:misc'
+			'copy:lib'
 			'copy:img'
 		]
-	grunt.registerTask 'default', ['build', 'watch:less', 'watch:js', 'watch:views']
+	grunt.registerTask 'dev', ['build', 'watch:less', 'watch:js', 'watch:views', 'http-server:dev']
+	grunt.registerTask 'default', ['dev']

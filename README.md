@@ -50,4 +50,6 @@ npm install -g grunt-cli
 ```bash
 npm start
 ```
+
+ 5. Point your browser at http://localhost:8080
 ________________________________________________________________________________
