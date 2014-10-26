@@ -23,6 +23,9 @@ module.exports = (grunt) ->
 
 		concat:
 			js:
+				options:
+					separator: ';'
+					process: (source, filename) -> '(function() {\n'+source+'\n})();'
 				src: ['source/js/modules/**.js']
 				dest: 'www/js/modules.js'
 			views:
@@ -52,6 +55,8 @@ module.exports = (grunt) ->
 					dest: 'www/views'
 				]
 			js:
+				options:
+					process: (source, filename) -> '(function() {\n'+source+'\n})();'
 				files: [
 					{
 						expand: true
