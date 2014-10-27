@@ -27,6 +27,7 @@
   "homepage": "https://github.com/jamtat/perfectcleavage",
   "devDependencies": {
     "bower": "^1.3.12",
+    "coffeeson": "^0.1.0",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",

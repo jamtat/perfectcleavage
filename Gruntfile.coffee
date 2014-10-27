@@ -1,3 +1,5 @@
+cson = require 'coffeeson'
+
 module.exports = (grunt) ->
 
 	# Project configuration
@@ -13,7 +15,10 @@ module.exports = (grunt) ->
 				tasks: ['copy:js', 'concat:js']
 			views:
 				files: ['source/index.html', 'source/views/**']
-				tasks: ['copy:index', 'copy:views', 'concat:views']
+				tasks: ['copy:views', 'concat:views', 'copy:index']
+			data:
+				files: ['source/rockData/***']
+				tasks: ['compileData:rock']
 
 		concurrent:
 			options:
@@ -35,6 +40,11 @@ module.exports = (grunt) ->
 
 		clean:
 			build: ['www/**']
+
+		compileData:
+			rock:
+				src: 'source/rockData/*.coffee'
+				dest: 'www/rockData'
 
 		copy:
 			misc:
@@ -117,7 +127,16 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-http-server'
 	grunt.loadNpmTasks 'grunt-concurrent'
 
-	# Default task(s)
+	grunt.registerMultiTask 'compileData', 'Compile the data in coffeescript format', () ->
+		targets = grunt.file.expandMapping this.data.src, this.data.dest, cwd: './', ext: '.json', flatten: true
+		compile = (item) ->
+			json = cson.parse grunt.file.read item.src[0]
+			outpath = item.dest.split('/')[...-1].join('/') + '/'
+			outfile = outpath + item.dest.split('/').pop()
+			grunt.file.write outfile, JSON.stringify json
+		console.log targets
+		compile target for target in targets
+
 	grunt.registerTask 'build', [
 			'clean:build'
 			'less:build'
@@ -129,6 +148,7 @@ module.exports = (grunt) ->
 			'copy:misc'
 			'copy:lib'
 			'copy:img'
+			'compileData:rock'
 		]
 	grunt.registerTask 'dev', ['build', 'http-server:dev', 'concurrent:watch']
 	grunt.registerTask 'default', ['dev']
