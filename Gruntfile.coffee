@@ -24,11 +24,12 @@ module.exports = (grunt) ->
 		concat:
 			js:
 				options:
-					separator: ';'
-					process: (source, filename) -> '(function() {\n'+source+'\n})();'
+					process: (source, filename) -> "\n(function() {\n#{source}\n})();\n"
 				src: ['source/js/modules/**.js']
 				dest: 'www/js/modules.js'
 			views:
+				options:
+					process: (source, filename) -> "<script type=\"text/ng-template\" id=\"/views/#{filename.split('/').pop()}\">#{source}</script>"
 				src: ['source/views/**.html']
 				dest: 'www/views.html'
 
@@ -45,6 +46,8 @@ module.exports = (grunt) ->
 					}
 				]
 			index:
+				options:
+					process: (source, filename) -> source.replace '</head>', "#{grunt.file.read 'www/views.html'}\n</head>"
 				src: 'source/index.html'
 				dest: 'www/index.html'
 			views:
@@ -120,9 +123,9 @@ module.exports = (grunt) ->
 			'less:build'
 			'copy:js'
 			'concat:js'
-			'copy:index'
 			'copy:views'
 			'concat:views'
+			'copy:index'
 			'copy:misc'
 			'copy:lib'
 			'copy:img'

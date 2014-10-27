@@ -10,7 +10,7 @@ app.config(function($locationProvider, $routeProvider) {
 
     $routeProvider.
     when('/', {
-        templateUrl: 'views/home.html',
+        templateUrl: '/views/home.html',
         controller: 'homeCtrl'
     }).
     otherwise({
