@@ -1,21 +1,25 @@
 var app = angular.module('PerfectCleavage', [
     'ngTouch',
     'ngRoute',
-    'rockServices'
+    'rockView'
 ])
 
 
 app.config(function($locationProvider, $routeProvider) {
-    $locationProvider.html5Mode(true)
+    //$locationProvider.html5Mode(true)
 
     $routeProvider.
     when('/', {
         templateUrl: '/views/home.html',
         controller: 'homeCtrl'
     }).
+    when('/rock/:rockId', {
+        templateUrl: '/views/rock.html',
+        controller: 'rockViewCtrl'
+    }).
     otherwise({
         redirectTo: '/'
-    });
+    })
 })
 
 app.controller('homeCtrl', function($scope) {
