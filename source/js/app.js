@@ -5,11 +5,17 @@ var app = angular.module('PerfectCleavage', [
 ])
 
 
-app.config(function($routeProvider) {
-    $routeProvider.when('/', {
+app.config(function($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode(true)
+
+    $routeProvider.
+    when('/', {
         templateUrl: 'views/home.html',
         controller: 'homeCtrl'
-    })
+    }).
+    otherwise({
+        redirectTo: '/'
+    });
 })
 
 app.controller('homeCtrl', function($scope) {
