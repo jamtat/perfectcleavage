@@ -5,6 +5,13 @@ angular.module('rockGrid', [
 // Grid
 controller('rockGridCtrl', function($scope, Rock) {
     $scope.rocks = Rock.query()
+    $scope.gridWidth = 4
+}).
+
+filter('int', function() {
+    return function(input) {
+        return input|0
+    }
 }).
 
 directive('rockGrid', function() {

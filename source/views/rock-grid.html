@@ -1,3 +1,7 @@
 <ul>
-    <rock-grid-item ng-repeat="rock in rocks"></rock-grid-item>
+    <rock-grid-item ng-repeat="rock in rocks"
+                    data-ind="{{$index}}"
+                    data-row="{{$index/gridWidth|int}}"
+                    data-col="{{$index%gridWidth}}"
+                    ></rock-grid-item>
 </ul>
