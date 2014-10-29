@@ -1,7 +1,8 @@
 var app = angular.module('PerfectCleavage', [
     'ngTouch',
     'ngRoute',
-    'rockView'
+    'rockView',
+    'rockGrid'
 ])
 
 
