@@ -18,7 +18,7 @@ module.exports = (grunt) ->
 				tasks: ['copy:views', 'concat:views', 'copy:index']
 			data:
 				files: ['source/rockData/***']
-				tasks: ['compileData:rock']
+				tasks: ['compileData:rocks']
 
 		concurrent:
 			options:
@@ -42,7 +42,7 @@ module.exports = (grunt) ->
 			build: ['www/**']
 
 		compileData:
-			rock:
+			rocks:
 				src: 'source/rockData/*.coffee'
 				dest: 'www/rockData'
 
@@ -128,14 +128,23 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks 'grunt-concurrent'
 
 	grunt.registerMultiTask 'compileData', 'Compile the data in coffeescript format', () ->
+		name = this.target
 		targets = grunt.file.expandMapping this.data.src, this.data.dest, cwd: './', ext: '.json', flatten: true
+		all = []
 		compile = (item) ->
 			json = cson.parse grunt.file.read item.src[0]
+			itemid = item.dest.split('/').pop().split('.')[0]
+			json.rockid = itemid
+			all.push json
 			outpath = item.dest.split('/')[...-1].join('/') + '/'
 			outfile = outpath + item.dest.split('/').pop()
 			grunt.file.write outfile, JSON.stringify json
-		console.log targets
+
 		compile target for target in targets
+		finalTarget = "#{this.data.dest}/#{name}.json"
+
+		grunt.file.write finalTarget, JSON.stringify all
+		console.log "Compiled #{all.length} data file#{if all.length == 1 then '' else 's'} for #{name}"
 
 	grunt.registerTask 'build', [
 			'clean:build'
@@ -148,7 +157,7 @@ module.exports = (grunt) ->
 			'copy:misc'
 			'copy:lib'
 			'copy:img'
-			'compileData:rock'
+			'compileData:rocks'
 		]
 	grunt.registerTask 'dev', ['build', 'http-server:dev', 'concurrent:watch']
 	grunt.registerTask 'default', ['dev']
