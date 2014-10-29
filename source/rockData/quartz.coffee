@@ -1,4 +1,5 @@
 name:       'Quartz'
+formula:    'SiO_2'
 colour:     'Colourless when pure. Colours caused by impurities of inclusions.'
 habit:      'Hexagonal prisms with pyramidal ends or massive'
 cleavage:   'Poor'
