@@ -16,3 +16,4 @@ location:   [
                 'Fraizer\'s Hush Mine'
             ]
 other:      'It is the second most abundant mineral in the Earth\'s crust.'
+hero:		'quartz.jpeg'
