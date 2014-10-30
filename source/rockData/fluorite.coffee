@@ -15,3 +15,4 @@ location:   [
                 'Heights Mine'
             ]
 other:      'Fluorite flouresces a blue colour in UV light'
+hero:		'fluorite.jpeg'

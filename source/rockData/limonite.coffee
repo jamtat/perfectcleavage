@@ -15,3 +15,4 @@ location:   [
                 'Killhope Mine'
             ]
 other:      ''
+hero:		'limonite.jpeg'

@@ -14,3 +14,4 @@ location:   [
                 'Blagill Mine'
             ]
 other:      'Soluble in Hydrochloric acid'
+hero:		'barytocalcite.jpeg'

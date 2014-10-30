@@ -13,3 +13,4 @@ location:   [
                 'Redburn Mine'
             ]
 other:      'Fluoresces orange/yellow under UV light. Cerussa means "white lead" in Latin.'
+hero:		'cerussite.jpeg'

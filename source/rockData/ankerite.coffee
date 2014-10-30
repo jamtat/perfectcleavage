@@ -13,3 +13,4 @@ location:   [
                 'Nenthead Mine'
             ]
 other:      ''
+hero:		'ankerite.jpeg'

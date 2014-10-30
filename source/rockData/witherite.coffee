@@ -19,3 +19,4 @@ location:   [
                 'Settlingstones Mine'
             ]
 other:      ''
+hero:		'witherite.jpeg'

@@ -15,3 +15,4 @@ location:   [
                 'Smallcleugh Mine'
             ]
 other:      'Calcite is fluorescent and phosphorescent.'
+hero:		'calcite.jpeg'

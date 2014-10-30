@@ -14,3 +14,4 @@ location:   [
                 'Hudgill Burn Mine'
             ]
 other:      ''
+hero:		'smithsonite.jpeg'

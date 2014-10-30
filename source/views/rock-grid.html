@@ -1,5 +1,5 @@
 <ul>
-    <rock-grid-item ng-repeat="rock in rocks"
+    <rock-grid-item ng-repeat="rock in rocks | filter:bacon"
                     data-ind="{{$index}}"
                     data-row="{{$index/gridWidth|int}}"
                     data-col="{{$index%gridWidth}}"

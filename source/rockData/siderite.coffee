@@ -13,3 +13,4 @@ location:   [
                 'St.Peter\'s Mine'
             ]
 other:      ''
+hero:		'siderite.jpeg'
