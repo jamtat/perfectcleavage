@@ -97,6 +97,15 @@ module.exports = (grunt) ->
 						dest: 'www/img'
 					}
 				]
+			fonts:
+				files: [
+					{
+						expand: true
+						cwd: 'source/fonts/'
+						src: ['**']
+						dest: 'www/fonts'
+					}
+				]
 
 		less:
 			build:
@@ -157,6 +166,7 @@ module.exports = (grunt) ->
 			'copy:misc'
 			'copy:lib'
 			'copy:img'
+			'copy:fonts'
 			'compileData:rocks'
 		]
 	grunt.registerTask 'dev', ['build', 'http-server:dev', 'concurrent:watch']

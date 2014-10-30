@@ -4,7 +4,12 @@ angular.module('rockGrid', [
 
 // Grid
 controller('rockGridCtrl', function($scope, Rock) {
-    $scope.rocks = Rock.query()
+    $scope.rocks = {}
+    Rock.query().$promise
+    .then(function(value) {
+        $scope.rocks = value
+        console.log(value)
+    })
     $scope.gridWidth = 4
 }).
 

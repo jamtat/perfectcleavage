@@ -23,6 +23,11 @@ body {
     color: white;
 }
 
+.view-container {
+    width: 100%;
+    height: 100%;
+}
+
 main {
     width: 100%;
     height: 100%;
@@ -36,13 +41,42 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-.scroll {overflow: auto; -webkit-overflow-scrolling: touch; }
-
-
 header {
     height: 44px + @statusbar;
     padding-top: @statusbar;
     line-height: 44px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.5);
     font-size:18px;
+    width: 100%;
 }
+
+a.back {
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding: 0 10px 0 27px;
+    float: left;
+    color: inherit;
+    text-decoration: none;
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    vertical-align: baseline;
+    &::before {
+        display: block;
+        font-family: "ElegantIcons";
+        content: "\34";
+        margin: -22px 0 0 -8px;
+        font-size: 43px;
+        position: absolute;
+        top:50%;
+        left:0;
+        text-align: center;
+    }
+}
+
+//Mixins
+@import "mixins.less";
+
+//Views
+@import "views/rockView.less";
