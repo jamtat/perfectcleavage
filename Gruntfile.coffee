@@ -74,7 +74,7 @@ module.exports = (grunt) ->
 					{
 						expand: true
 						cwd: 'source/js/'
-						src: ['app.js']
+						src: ['app.js', 'index.js']
 						dest: 'www/js'
 					}
 				]
@@ -152,7 +152,12 @@ module.exports = (grunt) ->
 		compile target for target in targets
 		finalTarget = "#{this.data.dest}/#{name}.json"
 
+		rockObj = {rocks:all}
+		all.forEach (rock) ->
+			rockObj[rock.rockid] = rock
+
 		grunt.file.write finalTarget, JSON.stringify all
+		grunt.file.write finalTarget.replace('.json', '.js'), "var rockData = #{JSON.stringify rockObj}"
 		console.log "Compiled #{all.length} data file#{if all.length == 1 then '' else 's'} for #{name}"
 
 	grunt.registerTask 'build', [

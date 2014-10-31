@@ -1,12 +1,13 @@
-var app = angular.module('PerfectCleavage', [
+var PerfectClevage = angular.module('PerfectCleavage', [
     'ngTouch',
     'ngRoute',
+    'cordovaService',
     'rockView',
     'rockGrid'
 ])
 
 
-app.config(function($locationProvider, $routeProvider) {
+PerfectClevage.config(function($routeProvider) {
     //$locationProvider.html5Mode(true)
 
     $routeProvider.
@@ -23,6 +24,6 @@ app.config(function($locationProvider, $routeProvider) {
     })
 })
 
-app.controller('homeCtrl', function($scope) {
+PerfectClevage.controller('homeCtrl', function($scope) {
     $scope.bacon = 'yes, this is dog'
 })
