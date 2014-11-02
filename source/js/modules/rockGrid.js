@@ -1,6 +1,6 @@
 angular.module('rockGrid', [
     'rockServices',
-    'ngFitText'
+    'ngAnimate'
 ]).
 
 // Grid

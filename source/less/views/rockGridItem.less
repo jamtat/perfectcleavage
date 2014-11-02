@@ -8,6 +8,20 @@ rock-grid-item {
     position: relative;
     margin: 0 auto 2px;
 
+    .transition(0.5s);
+
+    &.ng-leave.ng-leave-active,
+    &.ng-enter {
+        height:0px;
+        margin-bottom:0;
+    }
+
+    &.ng-enter.ng-enter-active,
+    &.ng-leave {
+        height: 80px;
+        margin-bottom:2px;
+    }
+
     .rock-item-wrapper {
         position: relative;
         width: 100%;
