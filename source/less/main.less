@@ -2,7 +2,7 @@
 
 @statusbar: 20px;
 @header: 44px;
-@headerbg: rgba(0,0,0,0.5);
+@headerbg: rgba(0,0,0,0.8);
 @accent: blue;
 
 * {
@@ -60,6 +60,7 @@ header {
     top:0;
     left:0;
     width: 100%;
+    z-index:100;
 }
 
 a.back {
@@ -123,11 +124,11 @@ a.back {
 @keyframes slideOut {
     from {
         .transform(translateX(0%));
-        opacity:1;
+        //opacity:1;
     }
     to {
-        .transform(translateX(50%));
-        opacity: 0;
+        .transform(translateX(110%));
+        //opacity: 0;
     }
 }
 @-webkit-keyframes slideOut {
@@ -173,6 +174,7 @@ a.back {
 .rockView {
     z-index: 9999;
     opacity:1;
+    .box-shadow(0 0 5px black);
 }
 
 .home {

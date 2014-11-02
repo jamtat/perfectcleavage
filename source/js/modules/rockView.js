@@ -1,7 +1,8 @@
 angular.module('rockView', [
     'ngRoute',
     'rockServices',
-    'ngSanitize'
+    'ngSanitize',
+    'ngFitText'
 ]).
 
 controller('rockViewCtrl', function($scope, $routeParams, Rock) {

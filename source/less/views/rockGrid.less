@@ -4,6 +4,7 @@ rock-grid {
     .flex-container();
     .flex-column();
 
+    @searchbar: 40px;
 
     .rock-grid-list {
         .flex(1,1,100%);
@@ -12,6 +13,7 @@ rock-grid {
         .flex-justify(flex-start);
         -webkit-align-content: flex-start;
         align-content: flex-start;
+        padding-top: @statusbar + @header + @searchbar;
         .scrollView();
     }
 
@@ -19,8 +21,12 @@ rock-grid {
         background: @headerbg;
         width: 100%;
         padding: 5px 10px;
-        .flex(0,0,auto);
         .transform(translateZ(0));
+        position: fixed;
+        top: @statusbar + @header;
+        left:0;
+        z-index:100;
+        height: @searchbar;
         input {
             .appearance(none);
             border: none;
@@ -31,8 +37,8 @@ rock-grid {
             display: block;
             font-size: 100%;
             width: 100%;
+            height: 100%;
             background: fade(black, 60%);
-            height: 1.6em;
             .border-radius(0.4em);
             color: #eee;
 
