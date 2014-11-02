@@ -1,20 +1,23 @@
 rock-grid-item {
-    @padding: 5px;
+    @padding: 0px;
     @cols: 3;
-    width: 100%/@cols;
-    .flex(0, 0, 100%/@cols);
-    padding-bottom: 100%/@cols;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 70px;
     position: relative;
+    margin: 0 auto 2px;
 
     .rock-item-wrapper {
-        position: absolute;
-        top: @padding;left: @padding;bottom: @padding;right: @padding;
+        position: relative;
+        width: 100%;
+        height: 100%;
         background: black;
         display: block;
-        position: absolute;
         text-decoration: none;
-        text-align: center;
+        text-align: left;
         color: inherit;
+        overflow: hidden;
     }
 
     .rock-thumb {
@@ -24,20 +27,21 @@ rock-grid-item {
         right: 0;
         bottom:0;
         background-size: cover;
-        background-position: center center;
-        @rot: hue(@accent);
-        -webkit-filter: sepia(1) hue-rotate(~"@{rot}deg") brightness(0.5);
+        background-position: left center;
+        @rot: hue(@accent)-30;
+    //    -webkit-filter: sepia(1) hue-rotate(~"@{rot}deg") brightness(0.5);
     }
 
     .rock-name {
-        position: absolute;
+        position: relative;
         z-index:1;
-        left:0;
-        bottom:0;
         width: 100%;
-        padding: @padding 2px;
-        text-align: center;
-        font-size: 17px;
-        background: linear-gradient(to bottom, fade(black, 0%), fade(black, 100%))
+        height: 100%;
+        text-align: left;
+        font-size: 40px;
+        padding: 5px 10px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        background: linear-gradient(to left, fade(black, 0%) 50%, fade(black, 90%) 100%)
     }
 }

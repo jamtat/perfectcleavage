@@ -6,6 +6,7 @@ angular.module('rockView', [
 
 controller('rockViewCtrl', function($scope, $routeParams, Rock) {
     var rockId = $routeParams.rockId
+    $scope.pageClass = 'rockView'
     $scope.rock = {}
     Rock.get({rockId: rockId}).$promise
     .then(function(value) {

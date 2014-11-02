@@ -95,3 +95,98 @@ a.back {
 @import "views/rockView.less";
 @import "views/rockGrid.less";
 @import "views/rockGridItem.less";
+
+
+
+//Animations
+@keyframes slideIn {
+	from {
+        .transform(translateX(100%));
+        opacity:0;
+    }
+	to {
+        .transform(translateX(0%));
+        opacity:1;
+    }
+}
+@-webkit-keyframes slideIn {
+	from {
+        .transform(translateX(100%));
+        opacity:0;
+    }
+	to {
+        .transform(translateX(0%));
+        opacity:1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        .transform(translateX(0%));
+        opacity:1;
+    }
+    to {
+        .transform(translateX(50%));
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slideOut {
+    from {
+        .transform(translateX(0%));
+        opacity:1;
+    }
+    to {
+        .transform(translateX(50%));
+        opacity: 0;
+    }
+}
+
+@keyframes stay {
+    from{}
+    to{}
+}
+@-webkit-keyframes stay {
+    from{}
+    to{}
+}
+
+[ng-view] {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.rockView.ng-enter {
+    -webkit-animation: slideIn 0.5s both ease-out;
+    animation: slideIn 0.5s both ease-out;
+    z-index: 9999;
+}
+
+.rockView.ng-leave {
+    -webkit-animation: slideOut 0.5s both ease-out;
+    animation: slideOut 0.5s both ease-out;
+    z-index: 9999;
+}
+
+.rockView {
+    z-index: 9999;
+    opacity:1;
+}
+
+.home {
+    z-index:1000;
+}
+
+.home.ng-enter {
+    -webkit-animation: stay 0.5s both ease-out;
+    animation: stay 0.5s both ease-out;
+    z-index: 1000;
+}
+
+.home.ng-leave, .ng-leave-a {
+    -webkit-animation: stay 0.5s both ease-out;
+    animation: stay 0.5s both ease-out;
+    z-index: 1000;
+}

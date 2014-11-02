@@ -1,6 +1,7 @@
 var PerfectClevage = angular.module('PerfectCleavage', [
     'ngTouch',
     'ngRoute',
+    'ngAnimate',
     'cordovaService',
     'rockView',
     'rockGrid'
@@ -25,5 +26,5 @@ PerfectClevage.config(function($routeProvider) {
 })
 
 PerfectClevage.controller('homeCtrl', function($scope) {
-    $scope.bacon = 'yes, this is dog'
+    $scope.pageClass = 'home'
 })
