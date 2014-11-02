@@ -15,3 +15,4 @@ location:   [
             ]
 other:      ''
 hero:		'smithsonite.jpeg'
+thumb:		'smithsonite-thumb.jpeg'

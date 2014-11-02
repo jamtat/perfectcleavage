@@ -17,3 +17,4 @@ location:   [
             ]
 other:      'It is the second most abundant mineral in the Earth\'s crust.'
 hero:		'quartz.jpeg'
+thumb:		'quartz-thumb.jpeg'

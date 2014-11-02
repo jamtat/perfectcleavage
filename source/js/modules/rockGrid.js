@@ -1,5 +1,6 @@
 angular.module('rockGrid', [
-    'rockServices'
+    'rockServices',
+    'ngFitText'
 ]).
 
 // Grid

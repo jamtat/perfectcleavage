@@ -84,7 +84,7 @@ module.exports = (grunt) ->
 						expand: true
 						cwd: 'bower_components/'
 						flatten: true
-						src: ['*/*.js', '!*/*.min.js']
+						src: ['*/*.js', '!*/*.min.js', '*/src/*.js']
 						dest: 'www/js/lib'
 					}
 				]

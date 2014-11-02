@@ -1,1 +1,6 @@
-<a ng-href="#/rock/{{rock.rockid}}">{{rock.name}}</a>
+<a class="rock-item-wrapper"
+   ng-href="#/rock/{{rock.rockid}}">
+   <div class="rock-thumb"
+        style="background-image:url(img/{{rock.thumb}})"></div>
+   <div class="rock-name" data-fittext>{{rock.name}}</div>
+</a>

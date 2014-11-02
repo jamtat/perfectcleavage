@@ -20,3 +20,4 @@ location:   [
             ]
 other:      ''
 hero:		'witherite.jpeg'
+thumb:		'witherite-thumb.jpeg'

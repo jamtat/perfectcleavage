@@ -14,3 +14,4 @@ location:   [
             ]
 other:      'Fluoresces orange/yellow under UV light. Cerussa means "white lead" in Latin.'
 hero:		'cerussite.jpeg'
+thumb:		'cerussite-thumb.jpeg'

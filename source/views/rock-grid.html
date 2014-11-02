@@ -1,7 +1,10 @@
-<ul>
-    <rock-grid-item ng-repeat="rock in rocks"
+<div id="search">
+    <input type="search" id="rock-search" ng-model="rockSearch.name" placeholder="search">
+</div>
+<div class="rock-grid-list">
+    <rock-grid-item ng-repeat="rock in rocks | filter:rockSearch"
                     data-ind="{{$index}}"
                     data-row="{{$index/gridWidth|int}}"
                     data-col="{{$index%gridWidth}}"
                     ></rock-grid-item>
-</ul>
+</div>

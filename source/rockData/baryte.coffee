@@ -16,3 +16,4 @@ location:   [
             ]
 other:      'Usually found as a gangue (waste) mineral in ore deposits. The name baryte comes from the Greek meaning "heavy" as it is much heavier than Calcite that looks very similar.'
 hero:		'baryte.jpeg'
+thumb:		'baryte-thumb.jpeg'

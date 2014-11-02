@@ -16,3 +16,4 @@ location:   [
             ]
 other:      ''
 hero:		'limonite.jpeg'
+thumb:		'limonite-thumb.jpeg'

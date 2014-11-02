@@ -1,0 +1,47 @@
+rock-grid {
+    width: 100%;
+    height: 100%;
+    .flex-container();
+    .flex-column();
+
+
+    .rock-grid-list {
+        .flex(1,1,100%);
+        .flex-container();
+        .flex-wrap();
+        .scrollView();
+    }
+
+    #search {
+        background: @headerbg;
+        width: 100%;
+        padding: 5px 10px;
+        .flex(0,0,auto);
+        input {
+            .appearance(none);
+            border: none;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            text-align: center;
+            display: block;
+            font-size: 100%;
+            width: 100%;
+            background: fade(black, 60%);
+            height: 1.6em;
+            .border-radius(0.4em);
+            color: #eee;
+
+            &::-webkit-input-placeholder {
+                color: #aaa;
+                text-transform: capitalize;
+                &::before {
+                    content: "\55";
+                    font-family: ElegantIcons;
+                    font-size: 0.8em;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}

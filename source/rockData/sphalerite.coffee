@@ -14,3 +14,4 @@ location:   [
             ]
 other:      'The old name for sphalerite, blende, is taken from the German, blind or deceptive, because while often resembling galena it yielded no lead.'
 hero:		'sphalerite.jpeg'
+thumb:		'sphalerite-thumb.jpeg'

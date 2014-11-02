@@ -1,0 +1,43 @@
+rock-grid-item {
+    @padding: 5px;
+    @cols: 3;
+    width: 100%/@cols;
+    .flex(0, 0, 100%/@cols);
+    padding-bottom: 100%/@cols;
+    position: relative;
+
+    .rock-item-wrapper {
+        position: absolute;
+        top: @padding;left: @padding;bottom: @padding;right: @padding;
+        background: black;
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        text-align: center;
+        color: inherit;
+    }
+
+    .rock-thumb {
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom:0;
+        background-size: cover;
+        background-position: center center;
+        @rot: hue(@accent);
+        -webkit-filter: sepia(1) hue-rotate(~"@{rot}deg") brightness(0.5);
+    }
+
+    .rock-name {
+        position: absolute;
+        z-index:1;
+        left:0;
+        bottom:0;
+        width: 100%;
+        padding: @padding 2px;
+        text-align: center;
+        font-size: 17px;
+        background: linear-gradient(to bottom, fade(black, 0%), fade(black, 100%))
+    }
+}

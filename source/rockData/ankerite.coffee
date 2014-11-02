@@ -14,3 +14,4 @@ location:   [
             ]
 other:      ''
 hero:		'ankerite.jpeg'
+thumb:		'ankerite-thumb.jpeg'

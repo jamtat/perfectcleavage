@@ -15,3 +15,4 @@ location:   [
             ]
 other:      'Soluble in Hydrochloric acid'
 hero:		'barytocalcite.jpeg'
+thumb:		'barytocalcite-thumb.jpeg'

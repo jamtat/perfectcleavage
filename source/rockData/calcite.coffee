@@ -16,3 +16,4 @@ location:   [
             ]
 other:      'Calcite is fluorescent and phosphorescent.'
 hero:		'calcite.jpeg'
+thumb:		'calcite-thumb.jpeg'

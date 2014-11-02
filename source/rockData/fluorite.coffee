@@ -16,3 +16,4 @@ location:   [
             ]
 other:      'Fluorite flouresces a blue colour in UV light'
 hero:		'fluorite.jpeg'
+thumb:		'fluorite-thumb.jpeg'

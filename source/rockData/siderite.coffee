@@ -14,3 +14,4 @@ location:   [
             ]
 other:      ''
 hero:		'siderite.jpeg'
+thumb:		'siderite-thumb.jpeg'

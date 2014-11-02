@@ -15,3 +15,4 @@ location:   [
             ]
 other:      'Aragonite is a polymorph of calcite (it has the same chemistry but a different shape).'
 hero:		'aragonite.jpeg'
+thumb:		'aragonite-thumb.jpeg'

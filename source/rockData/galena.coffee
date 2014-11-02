@@ -15,3 +15,4 @@ location:   [
             ]
 other:      'Galena specimens must be taken care of more so then other minerals. They are easily damaged, and well formed crystals may shatter into small crystal fragments if put under slight pressure or dropped'
 hero:		'galena.jpeg'
+thumb:		'galena-thumb.jpeg'
