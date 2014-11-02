@@ -1,4 +1,5 @@
 angular.module('rockGrid', [
+    'ngTouch',
     'rockServices',
     'ngAnimate'
 ]).
