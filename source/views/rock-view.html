@@ -1,18 +1,3 @@
 <div id="rockView">
-    <header><a href="#/" class="back">Home</a></header>
-    <section id="hero">
-        <div id="rock-title">
-            <div>
-                <h1 data-fittext>{{rock.name}}</h1>
-                <h2 ng-bind-html="rock.formula | formula"></h2>
-            </div>
-        </div>
-        <div class="hero-img-wrapper">
-            <img ng-src="img/{{rock.hero}}" imgload class="unloaded">
-        </div>
-    </section>
-    <section id="rock-body">
-        <p>{{rock.other}}</p>
-        <h2>Cleavage: {{rock.cleavage}}</h2>
-    </section>
+    <page-view></page-view>
 </div>
