@@ -13,11 +13,11 @@ PerfectClevage.config(function($routeProvider) {
 
     $routeProvider.
     when('/', {
-        templateUrl: '/views/home.html',
+        templateUrl: '/views/rock-home.html',
         controller: 'homeCtrl'
     }).
     when('/rock/:rockId', {
-        templateUrl: '/views/rock.html',
+        templateUrl: '/views/rock-view.html',
         controller: 'rockViewCtrl'
     }).
     otherwise({
