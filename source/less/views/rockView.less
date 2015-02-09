@@ -1,4 +1,6 @@
 #rockView {
+    @gutter: 10px;
+
     .scrollView();
     width: 100%;
     height: 100%;
@@ -31,7 +33,7 @@
             bottom: 0;
             left:0;
             width: 100%;
-            padding: 50px 20px 10px;
+            padding: 50px @gutter*2 @gutter;
             background: linear-gradient(to bottom, fade(black, 0%) 0%, fade(black, 70%) 100%);
 
             div {
@@ -58,5 +60,9 @@
             font-weight: 200;
             letter-spacing: 1px;
         }
+    }
+
+    p {
+        padding: 5px @gutter;
     }
 }
