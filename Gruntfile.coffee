@@ -141,7 +141,10 @@ module.exports = (grunt) ->
 		targets = grunt.file.expandMapping this.data.src, this.data.dest, cwd: './', ext: '.json', flatten: true
 		all = []
 		compile = (item) ->
-			json = cson.parse grunt.file.read item.src[0]
+			try
+				json = cson.parse grunt.file.read item.src[0]
+			catch error
+				console.error "Invalid cson: "+item.src[0]
 			itemid = item.dest.split('/').pop().split('.')[0]
 			json.rockid = itemid
 			all.push json
