@@ -3,6 +3,7 @@ angular.module('rockView', [
     'ngRoute',
     'rockServices',
     'ngSanitize',
+    'paginator',
     'ngFitText'
 ]).
 
