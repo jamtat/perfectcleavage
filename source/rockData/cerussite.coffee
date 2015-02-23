@@ -18,6 +18,7 @@ chabit: 	[
 				'Massive granular'
 				'Reticulate'
 				'Tabular to equant crystals.'
+			]
 cstruct: 	'Orthorhombic'
 depenv:		[
 				'Occurs as a secondary mineral in oxidised lead veins.'
