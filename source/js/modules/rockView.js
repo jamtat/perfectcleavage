@@ -34,7 +34,9 @@ directive('imgload', function() {
 
 filter('formula', function() {
     return function(input) {
-        return !!input ? input.replace(/_([0-9]+)/g, "<sub>$1</sub>") : ''
+        var subscript =  !!input ? input.replace(/_([0-9]+)/g, "<sub>$1</sub>") : ''
+        var superscript = subscript.replace(/\^([0-9]+\+?)/g, "<sup>$1</sup>")
+        return superscript
     }
 }).
 
