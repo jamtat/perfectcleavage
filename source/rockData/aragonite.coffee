@@ -5,7 +5,7 @@ abundance: 	'Extremely common on the seafloor as it forms in almost all mollusk 
 hardness: 	'3 - 3.5 (soft to medium)'
 lustre: 	'Vitreous inclining to resinous'
 ore: 		'None'
-fact: 		'Aragonite is considered essential for the replication of reef conditions in aquariums. It is the material that sea life is evolved to use and live around and also keeps the tank's pH close to its natural level'
+fact: 		'Aragonite is considered essential for the replication of reef conditions in aquariums. It is the material that sea life is evolved to use and live around and also keeps the tank\'s pH close to its natural level'
 uses: 		'Aquariums, gemstones'
 extractors: 'Facet-quality crystals come from the Czech Republic, superb cave growths from Mexico and flos-ferri from Austria and Greece'
 chabit: 	'Prismatic, acicular, columnar or fibrous. Occasionally in branching stalactitic forms called “flos-ferri” meaning “flowers of iron” due to their association with ores at Carinthian iron mines'
