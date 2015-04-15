@@ -28,3 +28,12 @@ PerfectClevage.config(function($routeProvider) {
 PerfectClevage.controller('homeCtrl', function($scope) {
     $scope.pageClass = 'home'
 })
+
+PerfectClevage.filter('range', function() {
+  return function(input, total) {
+    total = parseInt(total);
+    for (var i=0; i<total; i++)
+      input.push(i);
+    return input;
+  };
+});

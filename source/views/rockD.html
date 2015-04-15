@@ -1,9 +1,9 @@
-<div id="rockViewD">
-    <section id="rock-body" title="D">
-        <p>Specific Gravity: {{rock.gravity}}</p>
-        <p>Further Properties: {{rock.properties}}</p>
-        <p>Relevance at Killhope: {{rock.relevance}}</p>
-        <p>Optical Properties: {{rock.opprop}}</p>
-        <p>Impurities: {{rock.impurities}}</p>
+<div id="rockViewD" title="D">
+    <section class="rock-body">
+        <p title="Specific Gravity">Specific Gravity: {{rock.gravity}}</p>
+        <ul title="Further Properties"><li ng-repeat="prop in rock.properties">{{prop}}</li></ul>
+        <p title="Relevance at Killhope">Relevance at Killhope: {{rock.relevance}}</p>
+        <p title="Optical Properties">{{rock.opprop}}</p>
+        <p title="Impurities">{{rock.impurities}}</p>
     </section>
 </div>

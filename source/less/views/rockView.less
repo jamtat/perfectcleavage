@@ -66,4 +66,39 @@
     p {
         padding: 5px @gutter;
     }
+
+    .rock-body {
+        p, ul {
+            padding-left: 1em;
+            word-break: break-word;
+            margin-bottom: 1em;
+            display: block;
+            list-style-type: none;
+
+            &::before {
+                content: attr(title);
+                display: block;
+                font-size: 11px;
+                text-indent: -1em;
+                margin-bottom: 5px;
+            }
+            li {
+                padding-left: 1.5em;
+                display: block;
+                position: relative;
+                &::before {
+                    content: "-";
+                    position: absolute;
+                    left:0;
+                }
+            }
+        }
+    }
+
+    .rock-hue {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
 }

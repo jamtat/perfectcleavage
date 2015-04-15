@@ -16,6 +16,11 @@ controller('rockViewCtrl', function($scope, $routeParams, Rock) {
         $scope.rock = value
         console.log(value)
     })
+
+    this.hasHues = function(rock) {
+        console.log(rock)
+        return !!rock.hues
+    }
 }).
 
 directive('imgload', function() {
@@ -37,6 +42,12 @@ filter('formula', function() {
         var subscript =  !!input ? input.replace(/_([0-9]+)/g, "<sub>$1</sub>") : ''
         var superscript = subscript.replace(/\^([0-9]+\+?)/g, "<sup>$1</sup>")
         return superscript
+    }
+}).
+
+filter('rockColour', function() {
+    return function(input) {
+        return input.join('/')
     }
 }).
 
@@ -75,5 +86,14 @@ directive('rockD', function() {
         templateUrl: '/views/rockD.html'
     }
 }).controller('rockDCtrl', function($scope, $element) {
+
+}).
+directive('rockHues', function() {
+    return {
+        restrict: 'E',
+        controller: 'rockHuesCtrl',
+        templateUrl: '/views/rockHues.html'
+    }
+}).controller('rockHuesCtrl', function($scope, $element) {
 
 })

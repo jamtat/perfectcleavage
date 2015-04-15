@@ -1,8 +1,8 @@
-<div id="rockViewC">
-    <section id="rock-body" title="C">
-        <p>Further Uses: {{rock.usesplus}}</p>
-        <p>Streak: {{rock.streak}}</p>
-        <p>Cleavage: {{rock.cleavage}}</p>
-        <p>Fracture: {{rock.fracture}}</p>
+<div id="rockViewC" title="C">
+    <section class="rock-body">
+        <ul title="Further Uses"><li ng-repeat="use in rock.usesplus">{{use}}</li></ul>
+        <p title="Streak">{{rock.streak}}</p>
+        <p title="Cleavage">{{rock.cleavage}}</p>
+        <p title="Fracture">{{rock.fracture}}</p>
     </section>
 </div>

@@ -62,3 +62,4 @@ opprop: 	'None'
 impurities:	'None'
 hero:		'fluorite.jpeg'
 thumb:		'fluorite-thumb.jpeg'
+hues:		5

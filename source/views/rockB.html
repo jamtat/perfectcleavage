@@ -1,12 +1,12 @@
 <div id="rockViewB" title="B">
     <section class="rock-body">
-        <p>Uses: {{rock.uses}}</p>
-        <p>Main extractors: {{rock.extractors}}</p>
-        <p>Crystal Habit: {{rock.chabit}}</p>
-        <p>Crystal Structure: {{rock.cstruct}}</p>
-        <p>Depositional Environment: {{rock.depenv}}</p>
-        <p>Transparency: {{rock.tparency}}</p>
-        <p>Origin of Name: {{rock.origin}}</p>
-        <p>Colours observed at Killhope: {{rock.observed}}</p>
+        <ul title="Uses"><li ng-repeat="use in rock.uses">{{use}}</li></ul>
+        <ul title="Main Extractors"><li ng-repeat="extractor in rock.extractors">{{extractor}}</li></ul>
+        <ul title="Crystal Habit"><li ng-repeat="habit in rock.chabit">{{habit}}</li></ul>
+        <p title="Crystal Structure">{{rock.cstruct}}</p>
+        <ul title="Depositional Environment"><li ng-repeat="d in rock.depenv">{{d}}</li></ul>
+        <p title="Transparency">{{rock.tparency}}</p>
+        <p title="Origin of Name">{{rock.origin}}</p>
+        <p title="Colours observed at Killhope">{{rock.observed | rockColour}}</p>
     </section>
 </div>

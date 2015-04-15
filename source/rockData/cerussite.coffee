@@ -46,3 +46,4 @@ opprop: 	'Biaxial with common contact or penetration twins.'
 impurities:	'Blue and green colours typically indicate traces of copper.'
 hero:		'cerussite.jpeg'
 thumb:		'cerussite-thumb.jpeg'
+hues:		1

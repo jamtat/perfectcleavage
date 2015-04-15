@@ -45,6 +45,10 @@ directive('paginator', function() {
 
             for(i; i < pages.length; i++) {
                 page = pages[i]
+                var c = page.children[0]
+                if(!c || (c.title === "Hues" && $scope.rock && !$scope.rock.hues) ) {
+                    continue
+                }
                 var title = page.children[0].title,
                     d = document.createElement('div')
 
@@ -53,7 +57,7 @@ directive('paginator', function() {
                 d.innerHTML = title
                 buttonBar.appendChild(d)
                 var button = angular.element(d)
-                button.on('click', $ctrl.onPageClick)
+                button.on(isTouchDevice() ? 'touchend': 'click', $ctrl.onPageClick)
                 $ctrl.pages.push(page)
                 $ctrl.buttons.push(d)
             }
@@ -61,3 +65,10 @@ directive('paginator', function() {
         }
     }
 })
+
+function isTouchDevice() {
+   var el = document.createElement('div');
+   el.setAttribute('ontouchstart', 'return;'); // or try "ontouchstart"
+   return ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+   return typeof el.ongesturestart === "function";
+}
