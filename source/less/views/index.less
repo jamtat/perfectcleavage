@@ -13,6 +13,7 @@
 #logo-section {
 	position: relative;
 	overflow: hidden;
+	.flex(0,0);
 
 	&::after {
 		content: "";
@@ -29,7 +30,7 @@
 
 	#killhope-logo {
 		display: block;
-		margin: 30px 0;
+		margin: 30px auto;
 		-webkit-animation: slideUp 0.8s both ease 1s;
 	    animation: slideUp 0.8s both ease 1s;
 	}
@@ -38,21 +39,32 @@
 #links-section {
 	.flex(1);
 	.flex-container();
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-align-items: center;
-	align-items: center;
+	.flex-column();
+
+
+	.row {
+		.flex(1,1,200px);
+		height: 200px;
+		width: 100%;
+		.flex-container();
+		-webkit-align-items: stretch;
+		align-items: stretch;
+	}
 
 	a {
-		.flex(0,0);
+		width: 100%;
+		.flex(1,1,100%);
 		display: block;
-		width: 45%;
 		text-decoration: none;
+		.flex-container();
+		padding: 5px;
+		svg {
+			.flex();
+			-webkit-align-items: stretch;
+			align-items: stretch;
+		}
 	}
 	svg {
-		width: 100%;
 		display: block;
 
 		-webkit-animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
