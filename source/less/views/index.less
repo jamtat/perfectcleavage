@@ -1,0 +1,106 @@
+.index {
+	background: black;
+}
+
+#index {
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	.flex-container();
+	.flex-column();
+}
+
+#logo-section {
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom:0;
+		height: 1px;
+		width: 70%;
+		left: 15%;
+		background: white;
+		-webkit-animation: fadeIn 0.5s both ease-in-out 0.8s;
+	    animation: fadeIn 0.5s both ease-in-out 0.8s;
+	}
+
+	#killhope-logo {
+		display: block;
+		margin: 30px 0;
+		-webkit-animation: slideUp 0.8s both ease 1s;
+	    animation: slideUp 0.8s both ease 1s;
+	}
+}
+
+#links-section {
+	.flex(1);
+	.flex-container();
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: center;
+	align-items: center;
+
+	a {
+		.flex(0,0);
+		display: block;
+		width: 45%;
+		text-decoration: none;
+	}
+	svg {
+		width: 100%;
+		display: block;
+
+		-webkit-animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
+	    animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
+
+		circle {
+			stroke: white;
+			fill: black;
+			stroke-width: 2;
+			.transition(3s);
+		}
+		text, tspan {
+			fill: white;
+			font-weight: 300;
+			text-anchor: middle;
+			x: 50;
+		}
+		text[x] {
+			alignment-baseline: middle;
+		}
+	}
+}
+
+@-webkit-keyframes slideUp {
+	from {
+        .transform(translateY(150%));
+        opacity:0;
+    }
+	to {
+        .transform(translateY(0%));
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+        opacity:0;
+    }
+	to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes scaleIn {
+	from {
+		.transform(scale(0));
+    }
+	to {
+		.transform(scale(1));
+    }
+}

@@ -13,8 +13,12 @@ PerfectClevage.config(function($routeProvider) {
 
     $routeProvider.
     when('/', {
+        templateUrl: '/views/index.html',
+        controller: 'indexCtrl'
+    }).
+    when('/minerals', {
         templateUrl: '/views/rock-home.html',
-        controller: 'homeCtrl'
+        controller: 'mineralCtrl'
     }).
     when('/rock/:rockId', {
         templateUrl: '/views/rock-view.html',
@@ -25,8 +29,15 @@ PerfectClevage.config(function($routeProvider) {
     })
 })
 
-PerfectClevage.controller('homeCtrl', function($scope) {
+PerfectClevage.controller('mineralCtrl', function($scope) {
     $scope.pageClass = 'home'
+})
+
+PerfectClevage.controller('indexCtrl', function($scope) {
+    $scope.pageClass = 'index'
+    Array.prototype.slice.call(document.querySelectorAll('a svg'), 0).map(function(el, i) {
+        el.style.webkitAnimationDelay = el.style.animationDelay = ((i+1)*0.15 + 1)+'s'
+    })
 })
 
 PerfectClevage.filter('range', function() {

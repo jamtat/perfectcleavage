@@ -92,6 +92,7 @@ a.back {
 @import "mixins.less";
 
 //Views
+@import "views/index.less";
 @import "views/home.less";
 @import "views/rockView.less";
 @import "views/rockGrid.less";
@@ -192,4 +193,20 @@ a.back {
     -webkit-animation: stay 0.5s both ease-out;
     animation: stay 0.5s both ease-out;
     z-index: 1000;
+}
+
+.index {
+    z-index:500;
+}
+
+.index.ng-enter {
+    -webkit-animation: stay 0s both ease-out;
+    animation: stay 0s both ease-out;
+    z-index: 500;
+}
+
+.index.ng-leave, .ng-leave-a {
+    -webkit-animation: stay 0s both ease-out;
+    animation: stay 0s both ease-out;
+    z-index: 500;
 }
