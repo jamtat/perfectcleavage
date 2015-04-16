@@ -45,6 +45,15 @@ module.exports = (grunt) ->
 			rocks:
 				src: 'source/rockData/*.coffee'
 				dest: 'www/rockData'
+				varname: 'rockData'
+			quiz:
+				src: 'source/quiz.coffee'
+				dest: 'www/'
+				varname: 'quizData'
+			glossary:
+				src: 'source/glossary.coffee'
+				dest: 'www/'
+				varname: 'glossaryData'
 
 		copy:
 			misc:
@@ -160,7 +169,7 @@ module.exports = (grunt) ->
 			rockObj[rock.rockid] = rock
 
 		grunt.file.write finalTarget, JSON.stringify all
-		grunt.file.write finalTarget.replace('.json', '.js'), "var rockData = #{JSON.stringify rockObj}"
+		grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify rockObj}"
 		console.log "Compiled #{all.length} data file#{if all.length == 1 then '' else 's'} for #{name}"
 
 	grunt.registerTask 'build', [
@@ -176,6 +185,8 @@ module.exports = (grunt) ->
 			'copy:img'
 			'copy:fonts'
 			'compileData:rocks'
+			'compileData:quiz'
+			'compileData:glossary'
 		]
 	grunt.registerTask 'dev', ['build', 'http-server:dev', 'concurrent:watch']
 	grunt.registerTask 'default', ['dev']
