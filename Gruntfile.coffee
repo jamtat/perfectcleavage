@@ -164,12 +164,17 @@ module.exports = (grunt) ->
 		compile target for target in targets
 		finalTarget = "#{this.data.dest}/#{name}.json"
 
-		rockObj = {rocks:all}
-		all.forEach (rock) ->
-			rockObj[rock.rockid] = rock
 
 		grunt.file.write finalTarget, JSON.stringify all
-		grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify rockObj}"
+		if this.target is "rocks"
+			rockObj = {rocks:all}
+			all.forEach (rock) ->
+				rockObj[rock.rockid] = rock
+
+			grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify rockObj}"
+		else
+			grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify all}"
+
 		console.log "Compiled #{all.length} data file#{if all.length == 1 then '' else 's'} for #{name}"
 
 	grunt.registerTask 'build', [

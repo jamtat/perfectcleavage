@@ -171,7 +171,7 @@
 	}
 	{
 		word: 'Lattice'
-		def: 'a crystal lattice can be thought of as an array of 'small boxes' infinitely repeating in all three spatial directions.'
+		def: 'a crystal lattice can be thought of as an array of \'small boxes\' infinitely repeating in all three spatial directions.'
 	}
 	{
 		word: 'Lustre'
