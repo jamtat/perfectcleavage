@@ -1,0 +1,10 @@
+<section id="quiz-view">
+<header><a href="#/quiz" class="back"></a><h1>Quiz - {{quiz.title}}</h1></header>
+	<div class="quiz-questions">
+		<quiz-question ng-repeat="question in quiz.questions" style="background-color: {{quiz.colour}}"></quiz-question>
+		<input type="submit" value="Submit Answers" ng-click="checkAnswers()" style="color: {{quiz.colour}}">
+	</div>
+	<div class="result-overlay" ng-class="{hidden: !score}" style="color: {{quiz.colour}}">
+		{{score}}
+	</div>
+</section>

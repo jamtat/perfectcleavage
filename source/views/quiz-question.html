@@ -1,0 +1,5 @@
+<div class="question">{{question.q}}</div>
+<div class="answer" ng-repeat="answer in question.a">
+	<input type="radio" id="answer-{{question.i}}-{{$index}}" name="answer-{{question.i}}" ng-model="answers[question.i]" value="{{$index}}">
+	<label for="answer-{{question.i}}-{{$index}}">{{answer}}</label>
+</div>

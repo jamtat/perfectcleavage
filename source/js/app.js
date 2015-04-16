@@ -5,7 +5,8 @@ var PerfectClevage = angular.module('PerfectCleavage', [
     'cordovaService',
     'rockView',
     'rockGrid',
-    'glossaryList'
+    'glossaryList',
+    'quizView'
 ])
 
 
@@ -25,6 +26,14 @@ PerfectClevage.config(function($routeProvider) {
        templateUrl: '/views/glossary.html',
        controller: 'glossaryCtrl'
     }).
+    when('/quiz', {
+       templateUrl: '/views/quiz-home.html',
+       controller: 'quizCtrl'
+    }).
+    when('/quiz/:quizId', {
+       templateUrl: '/views/quiz.html',
+       controller: 'quizViewCtrl'
+    }).
     when('/rock/:rockId', {
         templateUrl: '/views/rock-view.html',
         controller: 'rockViewCtrl'
@@ -40,6 +49,11 @@ PerfectClevage.controller('mineralCtrl', function($scope) {
 
 PerfectClevage.controller('glossaryCtrl', function($scope) {
     $scope.pageClass = 'glossary'
+})
+
+PerfectClevage.controller('quizCtrl', function($scope) {
+    $scope.pageClass = 'quiz'
+    $scope.quizzes = quizData
 })
 
 PerfectClevage.controller('indexCtrl', function($scope) {

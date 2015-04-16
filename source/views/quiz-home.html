@@ -1,0 +1,6 @@
+<section id="quiz-home">
+<header><a href="#/" class="back"></a><h1>Choose a Quiz</h1></header>
+<div class="quiz-list">
+	<a class="quiz-link" ng-href="#/quiz/{{quiz.title}}" class="quiz-choice" ng-repeat="quiz in quizzes" style="background-color: {{quiz.colour}}">{{quiz.title}}</a>
+</div>
+</section>

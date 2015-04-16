@@ -1,6 +1,7 @@
 [
 	{
 		title: 'Easy'
+		colour: 'green'
 		questions: [
 			{
 				q: 'What is the hardest mineral on display at Killhope?'
@@ -96,6 +97,7 @@
 	}
 	{
 		title: 'Moderate'
+		colour: '#C78734'
 		questions: [
 			{
 				q: 'Which mineral has the chemical formula CaCO3?'
@@ -191,6 +193,7 @@
 	}
 	{
 		title: 'Hard'
+		colour: 'red'
 		questions: [
 			{
 				q: 'Which mineral is a pseudomorph (no crystal structure)?'
