@@ -4,7 +4,8 @@ var PerfectClevage = angular.module('PerfectCleavage', [
     'ngAnimate',
     'cordovaService',
     'rockView',
-    'rockGrid'
+    'rockGrid',
+    'glossaryList'
 ])
 
 
@@ -20,6 +21,10 @@ PerfectClevage.config(function($routeProvider) {
         templateUrl: '/views/rock-home.html',
         controller: 'mineralCtrl'
     }).
+    when('/glossary', {
+       templateUrl: '/views/glossary.html',
+       controller: 'glossaryCtrl'
+    }).
     when('/rock/:rockId', {
         templateUrl: '/views/rock-view.html',
         controller: 'rockViewCtrl'
@@ -33,12 +38,17 @@ PerfectClevage.controller('mineralCtrl', function($scope) {
     $scope.pageClass = 'home'
 })
 
+PerfectClevage.controller('glossaryCtrl', function($scope) {
+    $scope.pageClass = 'glossary'
+})
+
 PerfectClevage.controller('indexCtrl', function($scope) {
     $scope.pageClass = 'index'
     Array.prototype.slice.call(document.querySelectorAll('a svg'), 0).map(function(el, i) {
         el.style.webkitAnimationDelay = el.style.animationDelay = ((i+1)*0.15 + 1)+'s'
     })
 })
+
 
 PerfectClevage.filter('range', function() {
   return function(input, total) {

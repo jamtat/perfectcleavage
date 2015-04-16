@@ -173,7 +173,7 @@ module.exports = (grunt) ->
 
 			grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify rockObj}"
 		else
-			grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify all}"
+			grunt.file.write finalTarget.replace('.json', '.js'), "var #{this.data.varname} = #{JSON.stringify all[0]}"
 
 		console.log "Compiled #{all.length} data file#{if all.length == 1 then '' else 's'} for #{name}"
 

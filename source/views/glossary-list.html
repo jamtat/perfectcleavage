@@ -1,10 +1,8 @@
 <div id="search">
-    <input type="search" id="rock-search" ng-model="rockSearch.name" placeholder="Search Minerals">
+    <input type="search" id="rock-search" ng-model="glossarySearch.word" placeholder="Search Glossary">
 </div>
-<div class="rock-grid-list">
-    <rock-grid-item ng-repeat="term in terms | filter:rockSearch"
-                    data-ind="{{$index}}"
-                    data-row="{{$index/gridWidth|int}}"
-                    data-col="{{$index%gridWidth}}"
-                    ></rock-grid-item>
+<div class="glossary-list">
+    <div ng-repeat="term in glossary | filter:glossarySearch">
+        {{term.word}}
+    </div>
 </div>
