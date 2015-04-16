@@ -1,4 +1,4 @@
-easy:
+[
 	title: Easy
 	questions: [
 		{
@@ -84,7 +84,7 @@ easy:
 		}
 		{
 			q: ''
-			c: 
+			c:
 			a: [
 				''
 				''
@@ -92,3 +92,4 @@ easy:
 			]
 		}
 	]
+]
