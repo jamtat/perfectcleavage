@@ -5,7 +5,6 @@ angular.module('glossaryList', [
 // Grid
 controller('glossaryListCtrl', function($scope) {
     $scope.glossary = glossaryData
-	console.log(glossaryData)
 }).
 
 directive('glossaryList', function() {

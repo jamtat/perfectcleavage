@@ -2,7 +2,16 @@
     <input type="search" id="rock-search" ng-model="glossarySearch.word" placeholder="Search Glossary">
 </div>
 <div class="glossary-list">
-    <div ng-repeat="term in glossary | filter:glossarySearch">
-        {{term.word}}
+    <div class="glossary-term" ng-repeat="term in glossary | filter:glossarySearch">
+        <div class="main-term">
+            <span class="word">{{term.word}}</span>
+            <span class="def">{{term.def}}</span>
+        </div>
+        <div class="sub-terms" ng-if="term.sub">
+            <div class="sub-term" ng-repeat="subterm in term.sub">
+                <span class="word">{{subterm.word}}</span>
+                <span class="def">{{subterm.def}}</span>
+            </div>
+        </div>
     </div>
 </div>
