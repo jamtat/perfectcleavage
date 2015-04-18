@@ -19,6 +19,8 @@
     .flex-container();
     .flex-column();
 	.quiz-link {
+		-webkit-animation: fadeIn 0.5s both ease-in-out 0.8s;
+		animation: fadeIn 0.5s both ease-in-out 0.8s;
 		display: block;
 		.flex(1,1,100%);
 		.flex-container();
@@ -56,6 +58,9 @@
 		text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 		counter-increment: question;
 		position: relative;
+
+		-webkit-animation: slideIn 0.5s both ease-in-out;
+		animation: slideIn 0.5s both ease-in-out;
 
 		&::before {
 			position: absolute;
