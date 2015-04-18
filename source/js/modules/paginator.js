@@ -14,6 +14,12 @@ controller('paginatorCtrl', function($scope, $element) {
         self.goToPage(id)
     }
     this.goToPage = function(id) {
+        if(!self.pages.length) {
+            return
+        }
+        id = id >= self.pages.length ? self.pages.length-1 : id
+        id = id < 0 ? 0 : id
+
         self.pages.map(function(page) {
             angular.element(page).removeClass('active')
         })
@@ -22,6 +28,13 @@ controller('paginatorCtrl', function($scope, $element) {
             angular.element(button).removeClass('active')
         })
         self.buttons[id].classList.add('active')
+        self.active = id
+    }
+    $scope.nextPage = this.nextPage = function() {
+        self.goToPage(self.active+1)
+    }
+    $scope.prevPage = this.prevPage = function() {
+        self.goToPage(self.active-1)
     }
 }).
 
@@ -46,10 +59,10 @@ directive('paginator', function() {
             for(i; i < pages.length; i++) {
                 page = pages[i]
                 var c = page.children[0]
-                if(!c || (c.title === "Hues" && $scope.rock && !$scope.rock.hues) ) {
+                if(c && c.title === "Hues" && $scope.rock && !$scope.rock.hues) {
                     continue
                 }
-                var title = page.children[0].title,
+                var title = page.title ? page.title : page.children[0].title,
                     d = document.createElement('div')
 
                 d.className = 'paginator-button'

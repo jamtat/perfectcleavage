@@ -1,0 +1,69 @@
+.history {
+	background: black;
+
+	header {
+		box-shadow: 0 0 10px 3px black;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		margin: auto;
+	}
+
+	#formation-process {
+		max-width: 590px;
+	}
+	#formation-timeline {
+		max-width: 998px;
+		border: 5px solid white;
+	}
+
+	paginator {
+		padding-bottom: 0;
+
+		nav {
+			display: none;
+		}
+
+		article {
+			> div {
+				&::before {
+					content: attr(title);
+					display: block;
+					text-align: center;
+					font-weight: 100;
+					font-family: Georgia, serif;
+					font-size: 2.5em;
+					margin: 0.5em auto;
+					max-width: 800px;
+					border-bottom: 1px solid white;
+					padding-bottom: 0.5em;
+				}
+
+				&::after {
+					content: "Swipe to advance";
+					font-weight: 100;
+					font-size: 2em;
+					font-style: italic;
+					display: block;
+					text-align: center;
+					opacity: 0.5;
+					margin: 2em 0;
+					letter-spacing: 1px;
+				}
+
+				&:last-child::after {
+					display: none;
+				}
+			}
+
+			p {
+				width: 100%;
+				padding: 1em;
+				max-width: 800px;
+				margin: auto;
+			}
+		}
+	}
+}

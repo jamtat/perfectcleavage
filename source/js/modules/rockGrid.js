@@ -10,7 +10,6 @@ controller('rockGridCtrl', function($scope, Rock) {
     Rock.query().$promise
     .then(function(value) {
         $scope.rocks = value
-        console.log(value)
     })
     $scope.gridWidth = 4
 }).

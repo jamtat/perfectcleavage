@@ -6,7 +6,8 @@ var PerfectClevage = angular.module('PerfectCleavage', [
     'rockView',
     'rockGrid',
     'glossaryList',
-    'quizView'
+    'quizView',
+    'historyView'
 ])
 
 
@@ -25,6 +26,10 @@ PerfectClevage.config(function($routeProvider) {
     when('/glossary', {
        templateUrl: '/views/glossary.html',
        controller: 'glossaryCtrl'
+    }).
+    when('/history', {
+       templateUrl: '/views/history-home.html',
+       controller: 'historyViewCtrl'
     }).
     when('/quiz', {
        templateUrl: '/views/quiz-home.html',
@@ -49,6 +54,10 @@ PerfectClevage.controller('mineralCtrl', function($scope) {
 
 PerfectClevage.controller('glossaryCtrl', function($scope) {
     $scope.pageClass = 'glossary'
+})
+
+PerfectClevage.controller('historyCtrl', function($scope) {
+    $scope.pageClass = 'history'
 })
 
 PerfectClevage.controller('quizCtrl', function($scope) {

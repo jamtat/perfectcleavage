@@ -1,8 +1,8 @@
 <div id="rockViewHues" title="Hues" data-hues="{{rock.hues || 0}}">
     <div class="rock-hue">
-        <img src="img/{{rock.hero}}" alt="">
+        <img ng-src="img/{{rock.hero}}" alt="">
     </div>
     <div class="rock-hue" ng-repeat="hue in [] | range:rock.hues">
-        <img src="img/{{rock.name | lowercase}}-{{hue+1}}.jpg" alt="">
+        <img ng-src="img/{{rock.name | lowercase}}-{{hue+1}}.jpg" alt="">
     </div>
 </div>

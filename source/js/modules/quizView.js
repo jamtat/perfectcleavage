@@ -13,7 +13,6 @@ controller('quizViewCtrl', function($scope, $routeParams) {
 		return q
 	})
 	$scope.answers = questions.map(function(a){return 0})
-	console.log($scope.quiz)
 
 
 	$scope.checkAnswers = this.checkAnswers = function() {
@@ -27,10 +26,6 @@ controller('quizViewCtrl', function($scope, $routeParams) {
 		var totalScore = correct.reduce(function(a,b) {
 			return a+b
 		})
-		console.log(answers)
-		console.log(correctAnswers)
-		console.log(correct)
-		console.log(totalScore)
 		$scope.score = totalScore
 	}
 }).

@@ -14,11 +14,9 @@ controller('rockViewCtrl', function($scope, $routeParams, Rock) {
     Rock.get({rockId: rockId}).$promise
     .then(function(value) {
         $scope.rock = value
-        console.log(value)
     })
 
     this.hasHues = function(rock) {
-        console.log(rock)
         return !!rock.hues
     }
 }).
