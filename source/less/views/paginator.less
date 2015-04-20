@@ -20,9 +20,11 @@ paginator {
 			.transition(0.3s);
 			.transform(translateY(50%), scale(0.5));
 			opacity:0;
+			z-index: -1;
 			&.active {
 				.transform(translateY(0%), scale(1));
 				opacity:1;
+				z-index:0;
 			}
 		}
 	}
