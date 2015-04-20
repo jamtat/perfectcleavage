@@ -17,9 +17,11 @@ controller('paginatorCtrl', function($scope, $element) {
         if(!self.pages.length) {
             return
         }
+
+        id = Number(id)
         id = id >= self.pages.length ? self.pages.length-1 : id
         id = id < 0 ? 0 : id
-
+        
         self.pages.map(function(page) {
             angular.element(page).removeClass('active')
         })
