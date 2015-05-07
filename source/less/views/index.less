@@ -57,16 +57,33 @@
 		.flex(1,1,100%);
 		display: block;
 		text-decoration: none;
-		.flex-container();
+		//.flex-container();
 		padding: 5px;
+		position: relative;
 		svg {
 			.flex();
 			-webkit-align-items: stretch;
 			align-items: stretch;
 		}
+
+		div {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			bottom: 5px;
+			right: 5px;
+
+			-webkit-animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
+		    animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
+		}
 	}
+
 	svg {
-		display: block;
+		/* display: block; */
+		display: none;
 
 		-webkit-animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
 	    animation: scaleIn 0.3s both cubic-bezier(0.150, 1.650, 0.575, 1.005);
@@ -111,9 +128,9 @@
 
 @-webkit-keyframes scaleIn {
 	from {
-		.transform(scale(0) translateZ(0));
+		.transform(scale(0.001));
     }
 	to {
-		.transform(scale(1) translateZ(0));
+		.transform(scale(1));
     }
 }

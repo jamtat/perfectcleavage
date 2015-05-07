@@ -67,7 +67,7 @@ PerfectClevage.controller('quizCtrl', function($scope) {
 
 PerfectClevage.controller('indexCtrl', function($scope) {
     $scope.pageClass = 'index'
-    Array.prototype.slice.call(document.querySelectorAll('a svg'), 0).map(function(el, i) {
+    Array.prototype.slice.call(document.querySelectorAll('a div[style]'), 0).map(function(el, i) {
         el.style.webkitAnimationDelay = el.style.animationDelay = ((i+1)*0.15 + 1)+'s'
     })
 })
