@@ -91,11 +91,11 @@
 
 @-webkit-keyframes slideUp {
 	from {
-        .transform(translateY(150%));
+        .transform(translate3d(0,150%,0));
         opacity:0;
     }
 	to {
-        .transform(translateY(0%));
+        .transform(translate3d(0,0%,0));
         opacity:1;
     }
 }
@@ -111,9 +111,9 @@
 
 @-webkit-keyframes scaleIn {
 	from {
-		.transform(scale(0));
+		.transform(scale(0) translateZ(0));
     }
 	to {
-		.transform(scale(1));
+		.transform(scale(1) translateZ(0));
     }
 }
